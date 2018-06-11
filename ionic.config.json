@@ -1,0 +1,9 @@
+{
+  "name": "ColourPhotos",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+  
+}

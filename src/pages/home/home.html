@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <img width="30" height="30" src="assets/imgs/colorizelogo.jpg"> Colorize
+    </ion-title>
+  </ion-navbar>
+
+  <!--<script type="text/javascript">
+    console.log('hi it is me');
+  </script> -->
+
+</ion-header>
+
+<ion-content padding>
+  <ion-card padding>
+    <ion-row>
+      <ion-col col-4>
+        <ion-img width="100" height="100" src="assets/imgs/colorizelogo.jpg"></ion-img>
+      </ion-col>
+      <ion-col col-8>
+        <h1>Colorize your life !</h1>
+        Colorization application that colors black and white photos based on Algorithm from
+        <a href="https://algorithmia.com/">Algorithmia</a>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+
+
+  <!-- <p>
+
+    If you get lost, the
+    <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+  </p> -->
+
+
+  <!-- <ion-item id="rounded"> -->
+  <ion-card padding>
+    <div class="input-group">
+      <!-- <span class="input-group-addon">
+        <i class="glyphicon glyphicon-lock"></i>
+      </span> -->
+      <button ion-button full (click)="uploadFile()"> load picrure from gallary </button>
+      <ion-list>
+        <ion-item>
+          <ion-input type="text" class="rounded" id="rounded" value="" [(ngModel)]="inpone" placeholder=" Paste or type the image url here..."></ion-input>
+        </ion-item>
+      </ion-list>
+
+
+      <button ion-button full (click)="callalgo()">
+        Colorize
+      </button>
+
+      <!-- <input type="file" id="myFile" multiple size="50"> -->
+      <!-- //onchange="myFunction()" -->
+      <!-- <button ion-button full (click)="TestUpload()">
+        <ion-icon name="arrow-up"></ion-icon>
+        upload
+      </button> -->
+
+      <ion-item>
+        <p>{{imageURI}}</p>
+        <button ion-button (click)="getImage($event)">grab Image</button>
+        <!-- <input type="file" (change)="getImage($event)"> -->
+      </ion-item>
+      <ion-item>
+        <h4>Image Preview</h4>
+        <img src="{{imageFileName}}" *ngIf="imageFileName" alt="Ionic File" width="300" />
+      </ion-item>
+      <ion-item>
+        <button ion-button (click)="TestUpload()">Upload</button>
+      </ion-item>
+
+
+
+
+    </div>
+  </ion-card>
+  <!-- </ion-item> -->
+  <ion-card padding>
+    <!-- This is the place where the colored picture will appear -->
+    <div id="lbl"></div>
+  </ion-card>
+
+
+
+</ion-content>
